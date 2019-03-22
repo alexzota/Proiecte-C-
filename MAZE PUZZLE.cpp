@@ -13,7 +13,6 @@ using namespace std;
 
 void vecini(int &l, int &c, vector<vector<int> > &vizitat, stack< pair<int,int> > &st, int &marime_maze)
 {
-
     if (c == 0 && l == 0)
     {
         if( vizitat[l+1][c] && vizitat[l][c+1])
@@ -51,7 +50,6 @@ void vecini(int &l, int &c, vector<vector<int> > &vizitat, stack< pair<int,int> 
     }
     else if (l == marime_maze-1 && c == marime_maze-1)
     {
-
         if( vizitat[l-1][c] && vizitat[l][c-1])
         {
             st.pop();
@@ -77,7 +75,6 @@ void vecini(int &l, int &c, vector<vector<int> > &vizitat, stack< pair<int,int> 
     }
 }
 
-
 void afisare(vector< vector<int> > &maze, vector< vector< vector<int> > >&vecin, int l=0, int c=0)
 {
     cout << "    ";
@@ -101,12 +98,9 @@ void afisare(vector< vector<int> > &maze, vector< vector< vector<int> > >&vecin,
                 cout << "|";
             else
                 cout << " ";
-
         }
         cout << endl;
     }
-
-
     cout << "A - stanga\nW - sus\nD - dreapta\nS - jos\nX - EXIT ";
 }
 
@@ -207,7 +201,6 @@ void generare_labirint(vector< vector<int> > &maze, vector< vector< vector<int> 
     vecin[marime_maze-1][marime_maze-1][E] = 1;
 }
 
-
 int main()
 {
     srand (time(NULL));
@@ -215,8 +208,7 @@ int main()
     system("CLS");
     string welcome_text1 = "SALUT, VEI PARTICIPA LA UN JOC DE TIP LABIRINT, SCOPUL TAU ESTE SA GASESTI IESIREA ";
     string welcome_text2 = "INTRODU MARIMEA LABIRINTULUI ( PREFERABIL > 10 )";
-    cout << endl;
-    cout << "\n\n\n\n\n\n\n    \t\t\t";
+    cout << "\n\n\n\n\n\n\n\n    \t\t\t";
     for (auto ch : welcome_text1)
     {
         cout << ch;
@@ -229,15 +221,13 @@ int main()
         cout << ch;
         Sleep(5);
     }
-    cout << endl << endl << endl;
-
+    cout <<"\n\n\n";
 
     cin >> marime_maze;
     vector< vector<int> > maze(marime_maze, vector<int>(marime_maze));
 
     maze[0][0] = -1;
     maze[marime_maze-1][marime_maze-1] = 1;
-
 
     string begin_text1 = "LAYOUT-UL  LABIRINTULUI, MULT NOROC";
     cout << "    \t\t\t\t  ";
@@ -258,7 +248,6 @@ int main()
     }
     vector<vector<vector<int>>> vecin(marime_maze, vector<vector<int>>(marime_maze, vector<int>(2)));
     generare_labirint(maze, vecin);
-
 
     int l = 0, c = 0;
     system("CLS");
@@ -310,8 +299,5 @@ int main()
         if (l == marime_maze-1 && c== marime_maze-1){ cout << "\nFELICITARI, AI INVINS LABIRINTUL"; return 0;}
         in = _getch();
     }
-
-
     return 0;
 }
-
