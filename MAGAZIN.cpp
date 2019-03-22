@@ -4,7 +4,7 @@
 #include <string>
 #include <string.h>
 using namespace std;
-//template <class T>
+
 class produs
 {
 protected:
@@ -159,19 +159,16 @@ void magazin::afisare()
     cout << *this;
 }
 
-
 int main()
 {
     lot l1("Sarmale", 10, 0, 0, 5, 20, "22.07.2018", 10, 2);
     lot l2(l1);
     cout << l2;
-
     int n;
     cout << "1-Adauga un lot in magazin\n2-Adauga n loturi in magazin\n3 - Adauga un produs nou\n4-Afisare produse comercializate de magazin\n0- STOP\n";
     cin >> n;
     magazin m1;
     produs p1;
-
     while(n)
     {
         switch(n){
@@ -182,6 +179,5 @@ int main()
         }
         cout << " optiunea : "; cin >> n;
     }
-
     return 0;
 }
