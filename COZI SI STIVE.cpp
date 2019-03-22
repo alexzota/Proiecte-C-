@@ -332,7 +332,7 @@ int main()
     Stiva stiva;
     cout << "1 - Adaugare nr complex la stiva\n11 - CIN >> STIVA\n2 - Stergere nr stiva\n3 - COUT <<  STIVA\n4 - metoda() stiva\n";
     cout << "\n5 - Adaugare nr complex la coada\n55 - CIN >> COADA\n6 - Stergere nr coada\n7 - COUT << COADA\n8 - metoda() coada\n";
-    cout << "\n9 - nr total de nr complexe(static var, functie)\n10 - memorarea a n obiecte?(cozi)\n12 - upcast(stergere din coada)\n13 - downcast(adaugare vector)\n";
+    cout << "\n9 - nr total de nr complexe(static var, functie)\n10 - memorarea a n cozi\n12 - upcast(stergere din coada)\n13 - downcast(adaugare vector)\n";
     cout << "Introdu optiunea : "; cin >> optiune;
     while(optiune){
         switch(optiune){
@@ -353,6 +353,5 @@ int main()
         }
     cout << "\nIntrodu optiunea : "; cin >> optiune;
     }
-
     return 0;
 }
